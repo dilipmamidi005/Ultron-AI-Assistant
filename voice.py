@@ -1,8 +1,12 @@
 import pyttsx3
 
-engine = pyttsx3.init()
-
 def speak(text):
+    engine = pyttsx3.init()
+
     print("ULTRON:", text)
+
     engine.say(text)
+
     engine.runAndWait()
+
+    engine.stop()

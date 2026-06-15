@@ -1,4 +1,5 @@
 import webbrowser
+import subprocess
 
 def execute(command):
 
@@ -26,6 +27,23 @@ def execute(command):
 
         print("Opening Instagram...")
         webbrowser.open("https://instagram.com")
+
+    elif "calculator" in command:
+        print("Opening Calculator...")
+        subprocess.Popen("calc.exe")
+
+    elif "vs code" in command:
+        print("Opening VS Code...")
+        subprocess.Popen(r"C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\Code.exe")
+        
+
+    elif "file explorer" in command:
+        print("Opening File Explorer...")
+        subprocess.Popen("explorer")
+
+    elif "ultron folder" in command:
+        print("Opening Ultron Folder...")
+        subprocess.Popen(r'explorer "C:\Ultron Ai assistent"')
 
     else:
 
